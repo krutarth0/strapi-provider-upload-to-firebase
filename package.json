@@ -6,8 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "w4r10rd",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krutarth0/strapi-provider-upload-to-firebase.git"
+  },
+  "keywords": [
+    "firebase",
+    "strapi",
+    "upload plugin",
+    "media upload"
+  ],
   "dependencies": {
     "firebase-admin": "^9.6.0"
   }
