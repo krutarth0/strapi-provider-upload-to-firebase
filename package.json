@@ -1,13 +1,13 @@
 {
   "name": "strapi-provider-upload-to-firebase",
   "version": "1.0.0",
-  "description": "",
+  "description": "strapi plugin for firebase,lets you upload assets to firebase storage bucket",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test yet\" && exit 1"
   },
   "author": "w4r10rd",
-  "license": "MIT",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/krutarth0/strapi-provider-upload-to-firebase.git"
