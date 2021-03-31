@@ -35,8 +35,8 @@ module.exports = () => ({
 ```
 - credFile : `Parsed json file that we downloaded from firebase`
 - upload : `The object we export in order to use our media upload plugin in strapi`
-  - provider :`plugin provider`
-  - providerOptions:`data our module use to connect to your firebase app and upload assets`
+  - provider :`plugin provider name`
+  - providerOptions:`data that our module use to connect to your firebase app and upload assets`
     - serviceAccount :`parsed serviceAccount.json file`
     - bucket:`storage bucket name of firebase project`
     - debugLogs :`if you want to log out events while uploading or deleting`
