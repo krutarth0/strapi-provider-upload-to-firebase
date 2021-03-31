@@ -2,7 +2,7 @@
  strapi plugin for  uploading assets to firebase
 
 
-'''
+```
 module.exports = () => ({
     upload: {
       provider: 'to-firebase',
@@ -13,5 +13,7 @@ module.exports = () => ({
       },
     },
   });
+  
+```
 
-'''
+
