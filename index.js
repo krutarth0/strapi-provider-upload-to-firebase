@@ -4,11 +4,14 @@ var bucket = undefined;
 
 module.exports = {
     init(providerOptions) {
+
+      var debugLogs = providerOptions.debugLogs || true 
+
       // initialize firebase provider
       if(!bucket){
       
         //debug logs
-        if(providerOptions.debugLogs){
+        if(debugLogs){
           console.log("initializing firebase storage provider....................");                
         }
         admin.initializeApp({
@@ -24,7 +27,7 @@ module.exports = {
           
 
               //debug logs
-              if(providerOptions.debugLogs){
+              if(debugLogs){
                 console.log("uploadiingg....................");                
               }
 
@@ -42,6 +45,13 @@ module.exports = {
                 },
                 (err) => {
                   if (err) {
+
+                    //debug logs
+                    if(debugLogs){
+                      console.log("image could not be uploaded...................."); 
+                      console.log(`error: ${err}`);                
+                    }
+
                     reject(err);
                   }
 
@@ -51,7 +61,7 @@ module.exports = {
                   resolve();
 
                   //debug logs
-                  if(providerOptions.debugLogs){
+                  if(debugLogs){
                     console.log("image uploaded...................."); 
                     console.log(`with url : ${generatedUrl}`);                
                   }
@@ -66,7 +76,7 @@ module.exports = {
           // triggered when you attempt a delete operation in the media library
 
           //debug logs
-          if(providerOptions.debugLogs){
+          if(debugLogs){
             console.log(`Deletting ${file.name}....................`);                
           }
 
@@ -79,7 +89,7 @@ module.exports = {
                 if(err.code === 404){
                   
                   //debug logs
-                  if(providerOptions.debugLogs){
+                  if(debugLogs){
                     console.log("image that is being deleting is not available in storage bucket");
                     console.log("ignoring the above fact and removing the file from strapi...");               
                   }
@@ -87,7 +97,7 @@ module.exports = {
                 }
 
                 //debug logs
-                if(providerOptions.debugLogs){
+                if(debugLogs){
                   if(!err.code === 404){
                     err.errors.map(_err=> console.log(_err.message) ); 
                   }
@@ -97,7 +107,7 @@ module.exports = {
               resolve();
 
               //debug logs
-              if(providerOptions.debugLogs){
+              if(debugLogs){
                 console.log("deleted....................");           
               }
 
