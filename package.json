@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-to-firebase",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "strapi plugin for firebase,lets you upload assets to firebase storage bucket",
   "main": "index.js",
   "scripts": {
